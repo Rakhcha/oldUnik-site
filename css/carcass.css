@@ -1,0 +1,105 @@
+.background.clay {
+	background: url(../img/clay_background.webp) repeat center top;
+}
+
+.vertical-box {
+	min-height: calc(100vh - 130px);
+	background-color: rgba(36, 34, 35, 0.9);
+	box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
+	border-radius: 0.5em 0.5em 0px 0px;
+}
+
+.vertical-box header {
+	padding: 100px 60px 60px 60px;
+	font-size: 30px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.vertical-box section {
+	padding: 50px 60px 1px 60px;
+}
+
+
+/* POST */
+
+.post-container {
+	display: block;
+	margin-bottom: 100px;
+	height: 400px;
+	border-radius: 0.3em;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
+
+.post-info {
+	display: table-cell;
+}
+
+.post-image {
+	height: 400px;
+	width: 400px;
+	border-radius: 0.3em 0 0 0.3em;
+}
+
+
+.post-pretext {
+	background-color: #343233;
+	width: 680px;
+	height: 400px;
+	border-radius: 0 0.3em 0.3em 0;
+}
+
+.post-pretext-box {
+	position: relative;
+	margin: 25px auto;
+	width: 600px;
+	height: 350px;
+}
+
+.post-pretext-box h2 {
+	margin-bottom: 25px;
+}
+
+.post-pretext-box p {
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.post-pretext-box time {
+	position: absolute;
+	font-size: 15px;
+	bottom: 0;
+}
+
+.post-pretext-box a.button{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #343233;
+	background-color: #ffe651;
+	border-radius: 0.2em;
+	font-size: 20px;
+	padding: 10px 40px;
+}
+
+.page-container{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 80px;
+}
+
+.page-list {
+	display: flex;
+}
+
+.page-list img {
+	margin: 0 10px;
+}
+
+.page-list-hidden, .page-list-hidden:hover {
+	filter: opacity(0);
+	cursor: default;
+}
