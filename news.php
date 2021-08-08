@@ -1,5 +1,5 @@
 <?php
-	$page = round($_GET['page']); // 1 2 3 4 5 ...
+	$page = floor($_GET['page']); // 1 2 3 4 5 ...
 
 	if($page == null || $page <= 0){
 		header("Location: /news.php?page=1");
@@ -13,7 +13,7 @@
 	$sql = "SELECT * FROM `news` LIMIT 5 OFFSET ".$post_index."";
 	$request = mysqli_query($connect, $sql);
 
-	$lastpage = round((mysqli_fetch_array(mysqli_query($connect, "SELECT COUNT(*) FROM `news`"))["COUNT(*)"]+5)/5);
+	$lastpage = floor((mysqli_fetch_array(mysqli_query($connect, "SELECT COUNT(*) FROM `news`"))["COUNT(*)"]+5)/5);
 
 	if(mysqli_num_rows($request) == 0){ // перемещение на последнюю страницу, в случае ухода за границу новостных индексов
 		header("Location: /news.php?page=".$lastpage."");
@@ -99,9 +99,9 @@
 
 			</section>
 			<div class="page-container">
-				<div class="page-list">
+				<div <?php print('lastpage="'.$lastpage.'"')?> class="page-list" >
 					
-					<a href="?page='.($page-1).'">
+					<a>
 						<img src="img/page-list/left-button.svg" alt="error-lb">
 					</a>
 
@@ -111,7 +111,7 @@
 					<img src="img/page-list/medium-point.svg" alt="error-mep2">
 					<img src="img/page-list/mini-point.svg" alt="error-mp2">
 
-					<a href="?page='($page+1)'">
+					<a>
 						<img src="img/page-list/right-button.svg" alt="error-rb">
 					</a>
 

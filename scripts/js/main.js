@@ -36,51 +36,57 @@ function queryToMap(){
 
 	
 
-	$('.nav-btn').click(function(e){
-		if($('.nav-btn').hasClass('close')){
-			$('.nav-btn').attr('src', "img/menu-open.svg");
-			$('nav').toggleClass('turner nav-menu');
-		} else {
-			$('.nav-btn').attr('src', "img/menu-close.svg");
-			$('nav').toggleClass('turner nav-menu');
-		}
+$('.nav-btn').click(function(e){
+	if($('.nav-btn').hasClass('close')){
+		$('.nav-btn').attr('src', "img/menu-open.svg");
+		$('nav').toggleClass('turner nav-menu');
+	} else {
+		$('.nav-btn').attr('src', "img/menu-close.svg");
+		$('nav').toggleClass('turner nav-menu');
+	}
+	$('.nav-btn').toggleClass('close open');
+	
+});
 
+$(window).resize(function(e){
+	if(window.innerWidth > 970 && $('.nav-btn').hasClass('open')){
 		$('.nav-btn').toggleClass('close open');
-		
-	});
+		$('.nav-btn').attr('src', "img/menu-close.svg");
+		$('nav').toggleClass('turner nav-menu');
+	}
+});
 
-	$(window).resize(function(e){
+$(window).scroll(function(e){
+	if($('.nav-btn').hasClass('open')){
+		$('.nav-btn').toggleClass('close open');
+		$('.nav-btn').attr('src', "img/menu-close.svg");
+		$('nav').toggleClass('turner nav-menu');;
+	}
+});
 
-		if(window.innerWidth > 970 && $('.nav-btn').hasClass('open')){
-			$('.nav-btn').toggleClass('close open');
-			$('.nav-btn').attr('src', "img/menu-close.svg");
-			$('nav').toggleClass('turner nav-menu');
-		}
-	});
+$(document).ready(function(e){
 
-	$(window).scroll(function(e){
+	let page = Number.parseInt(queryToMap().get('page'));
+	if(isNaN(page)) return;
 
-		if($('.nav-btn').hasClass('open')){
-			$('.nav-btn').toggleClass('close open');
-			$('.nav-btn').attr('src', "img/menu-close.svg");
-			$('nav').toggleClass('turner nav-menu');;
-		}
-	});
+	let lastpage = $('.page-list')[0].getAttribute('lastpage');
 
-	$(document).ready(function(e){
-		let page = Number.parseInt(queryToMap().get('page'));
+	page != 1 ? $('.page-list > a').slice(0,1).attr('href','?page=' + (page - 1)) : null;
+	page != lastpage ? $('.page-list > a').slice(1,2).attr('href','?page=' + (page + 1)) : null;
 
-		if(page == 1) {
-			$('.page-list > a').slice(0,1).addClass('page-list-hidden');
-			$('.page-list > a').slice(1,2).attr('href','?page=' + page + 2);
-			$('.page-list > img').slice(0,2).addClass('page-list-hidden');
-		}
-		if(page == 2) {
-			$('.page-list > img').slice(0,1).addClass('page-list-hidden');
-		}
+	if(page == 1){
+		$('.page-list > a').slice(0,1).addClass('page-list-hidden');
+		$('.page-list > img').slice(0,2).addClass('page-list-hidden');
+	}
 
-		
-	});
+	page == 2 ? $('.page-list > img').slice(0,1).addClass('page-list-hidden') : null;
+	page == lastpage - 1 ? $('.page-list > img').slice(4,5).addClass('page-list-hidden') : null;
+	
+	if(page == lastpage){
+		$('.page-list > a').slice(1,2).addClass('page-list-hidden');
+		$('.page-list > img').slice(3,5).addClass('page-list-hidden');
+	}
+});
 
 
 
