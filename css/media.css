@@ -2,6 +2,30 @@
 	.container {
 		width: 960px;
 	}
+
+	/*CARCASS*/
+
+	.post-container {
+		height: 350px;
+		margin-bottom: 70px;
+	}
+
+	.post-pretext {
+		width: 440px;
+	}
+
+	.post-pretext-box{
+		height: 300px;
+	}
+
+	.post-pretext-box a.button{
+		padding: 10px 20px;
+	}
+
+	.page-container {
+		padding-bottom: 50px;
+	}
+
 }
 
 @media screen and (max-width: 970px) {
@@ -29,6 +53,29 @@
 		width: 760px;
 	}
 
+	/*CARCASS*/
+
+	.post-image {
+		display: none;
+	}
+
+	.post-pretext {
+		width: 590px;
+		border-radius: 0.3em;
+	}
+
+	.vertical-box header {
+		padding: 60px 60px 0 60px;
+	}
+
+	.page-list img {
+		width: 16px;
+		margin: 0px 8px;
+	}
+
+	.page-list img.arrow {
+		width: 30px;
+	}
 }
 
 @media screen and (max-width: 770px) {
@@ -37,12 +84,47 @@
 	}
 
 	.vertical-box header {
-		padding: 60px !important;
 		font-size: 25px !important;
 	}
 
 	.nav-menu ul {
 		width: 560px;
+	}
+
+	/*CARCASS*/
+
+	.post-pretext {
+		width: 390px;
+	}
+
+	.post-pretext-box {
+		height: 250px;
+	}
+
+	.post-pretext-box p {
+		-webkit-line-clamp: 3;
+		font-size: 20px;
+	}
+
+	.post-pretext-box a.button {
+		font-size: 17px;
+	}
+
+	.post-container {
+		height: 300px;
+	}
+
+	.vertical-box header {
+		padding: 60px 60px 0 60px;
+	}
+
+	.page-list img {
+		width: 11px;
+		margin: 0px 8px;
+	}
+
+	.page-list img.arrow {
+		width: 25px;
 	}
 
 }
@@ -117,18 +199,61 @@
 	.login-menu {
 		margin-right: 4.66vw;
 	}
-}
 
-/*CARCASS*/
+	/*CARCASS*/
 
-@media screen and (max-width: 570px) {
 	.vertical-box header {
 		padding: 10.52vw 5.52vw !important;
     	font-size: 4.38vw !important;
 	}
 
 	.vertical-box section {
-		padding: 0 5.52vw 10.52vw 5.52vw !important
+		padding: 0 5.52vw !important;
+	}
+
+	.post-pretext {
+		width: 81vw;
+	}
+
+	.post-pretext-box {
+		height: 39.5vw;
+		margin: 3.95vw;
+	}
+
+	.post-pretext-box p {
+		-webkit-line-clamp: 3;
+		font-size: 3.16vw;
+	}
+
+	.post-pretext-box h2 {
+		margin-bottom: 3.95vw;
+	}
+
+	.post-pretext-box a.button {
+		font-size: 2.686vw;
+		padding: 1.59vw 3.18vw;
+	}
+
+	.post-pretext-box time {
+		font-size: 2.385vw;
+	}
+
+	.post-container {
+		height: 47.4vw;
+		margin-bottom: 11.06vw;
+	}
+
+	.vertical-box header {
+		padding: 9.48vw 9.48vw 0 9.48vw;
+	}
+
+	.page-list img {
+		width: 2.954vw;
+		margin: 0 1.672vw;
+	}
+
+	.page-list img.arrow {
+		width: 5.875vw;
 	}
 
 }

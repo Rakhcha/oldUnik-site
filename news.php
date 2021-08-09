@@ -31,8 +31,8 @@
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/carcass.css">
+	<link rel="stylesheet" href="css/media.css">
 
 	<title>UnikVerse - Приватный сервер</title>
 
@@ -102,7 +102,7 @@
 				<div <?php print('lastpage="'.$lastpage.'"')?> class="page-list" >
 					
 					<a>
-						<img src="img/page-list/left-button.svg" alt="error-lb">
+						<img class="arrow" src="img/page-list/left-button.svg" alt="error-lb">
 					</a>
 
 					<img src="img/page-list/mini-point.svg" alt="error-mp1">
@@ -112,7 +112,7 @@
 					<img src="img/page-list/mini-point.svg" alt="error-mp2">
 
 					<a>
-						<img src="img/page-list/right-button.svg" alt="error-rb">
+						<img class="arrow" src="img/page-list/right-button.svg" alt="error-rb">
 					</a>
 
 				</div>

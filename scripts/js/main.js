@@ -86,6 +86,7 @@ $(document).ready(function(e){
 		$('.page-list > a').slice(1,2).addClass('page-list-hidden');
 		$('.page-list > img').slice(3,5).addClass('page-list-hidden');
 	}
+	
 });
 
 
