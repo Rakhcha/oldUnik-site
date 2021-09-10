@@ -8,8 +8,6 @@
 	<link rel="shortcut icon" href="img/favicon.ico">
 	
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/carcass.css">
 
 	<title>UnikVerse - Приватный сервер</title>
 
@@ -17,139 +15,94 @@
 
 <body>
 
-		<header  class="header">
+	<header  class="header">
 		<div class="container inline">
-
 			
-			<img class="nav-btn close" src="img/menu-close.svg" alt="">
-			
-			<div class="logo-mini turner">
-				<a href="">
-					<img src="img/uniklogo_mini.webp" alt="error: L001" >
-				</a>
+			<div class="logo-box">
+				<div class="text">
+					U
+				</div>
 			</div>
 
 			
-			<nav class="nav turner">
+			<nav class="nav-box">
 				<ul>
-					<li><a href="">Главная страница</a></li>
+					<li><a href="">Главная</a></li>
 					<li><a href="">Новости</a></li>
 					<li><a href="">Правила</a></li>
-					<li><a href="">Начать игру</a></li>
+					<li><a href="">Лавка</a></li>
 				</ul>
 			</nav>
-
-			<div class="nav login-menu">
-				<a href="">Войти</a>
-			</div>
+			
 		</div>
 	</header>
 
 
+	<section class="welcome">
+		<div class="container">
+			<div class="space-inline">
 
-	<div class="background-container top">
-
-		<section class="unik-background">
-			<div class="container height-980">
-				<div class="container uniklogo-box">
-					<div class="uniklogo-big can_move" sx="0.001" sy="-0.002"></div>
-					<div class="uniklogo-big can_move" sx="-0.001" sy="0.0015"></div>
-					<div class="uniklogo-big can_move" sx="0.001" sy="-0.002"></div>
+				<div class="info-box">
+					<h2>UnikVerse</h2>
+					<p>Это тёплый проект, для тебя и твоих друзей, у нас ты погрузишься в ламповую атмосферу жизни, где люди объединяются и возводят свои города.</p>
+					<a href="" class="button"> Начать игру  </a>
 				</div>
-				<div style="height: 265px" style class="container">
-					<div class="home-info-box">
-						<h2 class="turner">Присоединяйся к нам!</h2>
-						<form action="">
-							<button class="btn ">Начать игру</button>
-						</form>
-					</div>
-				</div>
-			</div>
 
-		</section>
-
-		<section>
-			<div class="separator"></div>
-			<div class="unik-background-fixed info-box">
-				<div class="container inline">
-					<div class="text-box">
-						<h2>Информация</h2>
-						<p>UnikWorld - приватный сервер для тех, кто не хочет состязаться по количеству ресурсов и крутости своей брони, здесь мы строим свои города мечты, города с законами и историей.<br><br>Создавайте свой город, торгуйте с игроками, делайте жизнь!</p>
-					</div>
-					<div class="text-box mini-text">
-						<h2>Версия</h2>
-						<p>Minecraft Java Edition 1.18 <br><br> Крайне рекомендуется установка серверного ресурспака и OptiFine <br><br> IP-адрес: 
-							<u class="ip" title="Нажмите, чтобы скопировать" onclick="copyText(this)">mc.unikverse.ru</u>
-						</p> 
-					</div>
+				<div class="image-box-welcome">
 				</div>
-			</div>
 
-			<div class="separator"></div>
-			<div class="unik-background-fixed info-box">
-				<div class="container inline">
-					<div class="text-box">
-						<h2><u><a href="" title="Открыть список сезонов!">Сезоны!</a></u></h2>
-						<p>Каждые три месяца спавн меняет свой облик с наступлением нового времени года, а вместе с этим можно обнаружить эксклюзивные товары и подарки от жителей. <br><br> Успейте собрать все эксклюзивные товары, ведь количество ограничено!</p>
-					</div>
-					<div class="text-box img">
-						<div class="info-images snowman can_move" sx="0.0015" sy="-0.002"></div>
-						<div class="info-images pumpkin can_move" sx="-0.0015" sy="0.002"></div>
-					</div>
-				</div>
-			</div>
+				
 
-			<div class="separator"></div>
-			<div class="unik-background-fixed info-box">
-				<div class="container inline">
-					<div class="text-box img">
-						<div class="info-images chiken can_move" sx="0.0012" sy="0.001"></div>
-						<div class="info-images burger can_move" sx="-0.0015" sy="-0.0018"></div>
-					</div>
-					<div class="text-box">
-						<h2><u><a href="" title="Открыть список декораций">Декорации!</a></u></h2>
-						<p>Мы пытаемся максимально разнообразить игру на сервере, поэтому в измерении спавна вы можете найти торговцев, которые продадут вам самые различные декоративные головы. <br><br> Заметье, не все торговцы на видных местах...</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="separator"></div>
-			<div class="unik-background-fixed info-box">
-				<div class="container inline">
-					<div class="text-box">
-						<h2><u><a href="" title="Открыть список игроков">Вайт-лист</a></u></h2>
-						<p>Сервер приватный, а значит не каждый сможет поиграть здесь. Это решение было принято в первую очередь  для комфортной, спокойной игры,  ведь на сервере нет привата, а значит у построек нет защиты. <br><br> А если уж сломал чью-то постройку - почини.</p>
-					</div>
-					<div class="text-box img" >
-						<div class="info-images goat can_move" sx="-0.0011" sy="0.005"></div>
-						<div class="info-images grass can_move" sx="0.0015" sy="0.0016"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="separator turner"></div>
-			<div class="unik-background-fixed info-box turner">
-				<div class="container">
-					<div class="tablet-box">
-						<div class="info-images tablet">
-							<div class="tablet">
-								<a href="">Начать игру!</a>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			
-			
-			
-		</section>
-		
-		<footer>
-			<div class="container footer">
-				©UnikVerse 2021
-			</div>		
-		</footer>
-	</div>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="container">
+			<div class="info-section space-inline">
+				<div class="image" id="planet"></div>
+				<div class="info">
+					<h2>UnikVerse Info</h2>
+					<p>Сервер Minecraft Java Edition на версии 1.18 с собственными плагинами.</p>
+					<p>Крайне важно установить Optifine последней версии.</p>
+					<p>IP-адрес: <u>mc.unikverse.ru</u></p>
+				</div>
+			</div>
+			<div class="info-section space-inline">
+				<div class="info">
+					<h2>Декорации</h2>
+					<p>У нас обширный список декораций:</p>
+					<p>Большой рынок <u>декоративных голов</u> на спавне и дополнительный ресурспак с различными моделями.</p>
+					<p>Все это созданно для разнообразия строительства.</p>
+				</div>
+				<div class="image" id="decor"></div>
+			</div>
+			<div class="info-section space-inline">
+				<div class="image" id="season"></div>
+				<div class="info">
+					<h2>Сезоны</h2>
+					<p>Каждые 3 месяца жители на спавне украшают его к приходу нового времени года</p>
+					<p>Вместе с этим туда же приезжают различные путешественники, которые предлагают эксклюзивный товар! Не упустите его!</p>
+				</div>
+			</div>
+			<div class="info-section space-inline">
+				<div class="info">
+					<h2>Вайт-лист</h2>
+					<p>Сервер приватный, а это значит не каждый сможет поиграть здесь. </p>
+					<p>Это решение было принято в первую очередь для комфортной, спокойной игры, ведь у нас нет привата территории.</p>
+					<p>А если сломал - почини.</p>
+				</div>
+				<div class="image" id="whitelist"></div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<p>UnikVerse. Все права защищены © 2021</p>
+		<p style="color:#cbcbcb">Сайт создал <a href="https://vk.com/irakhchik">Rakhchik</a></p>
+	</footer>
 
 	<script src="scripts/js/jquery-3.6.0.min.js"></script>
 	<script src="scripts/js/main.js"></script>
