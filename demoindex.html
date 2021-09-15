@@ -4,7 +4,7 @@
 <head>
 	
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1; shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	
 	<link rel="stylesheet" href="css/main.css">
@@ -15,7 +15,9 @@
 
 <body>
 
-	<header  class="header">
+	<div class="to-up disable"></div>
+
+	<header  class="header upheader">
 		<div class="container inline">
 			
 			<div class="logo-box">
@@ -27,7 +29,7 @@
 			
 			<nav class="nav-box">
 				<ul>
-					<li><a href="">Главная</a></li>
+					<li><a>Главная</a></li>
 					<li><a href="">Новости</a></li>
 					<li><a href="">Правила</a></li>
 					<li><a href="">Лавка</a></li>
@@ -45,14 +47,11 @@
 				<div class="info-box">
 					<h2>UnikVerse</h2>
 					<p>Это тёплый проект, для тебя и твоих друзей, у нас ты погрузишься в ламповую атмосферу жизни, где люди объединяются и возводят свои города.</p>
-					<a href="" class="button"> Начать игру  </a>
+					<a href="start.html" class="button"> Начать игру  </a>
 				</div>
 
-				<div class="image-box-welcome">
-				</div>
-
+				<div class="image-box-welcome"></div>
 				
-
 			</div>
 			
 		</div>
@@ -66,7 +65,7 @@
 					<h2>UnikVerse Info</h2>
 					<p>Сервер Minecraft Java Edition на версии 1.18 с собственными плагинами.</p>
 					<p>Крайне важно установить Optifine последней версии.</p>
-					<p>IP-адрес: <u>mc.unikverse.ru</u></p>
+					<p>IP-адрес: <u onclick="copyText(this)">mc.unikverse.ru</u></p>
 				</div>
 			</div>
 			<div class="info-section space-inline">

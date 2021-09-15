@@ -32,40 +32,6 @@
 	background-color: rgb(228 228 228 / 25%);
 }
 
-/*============================ HEADER ==============================*/
-
-.header {
-	position: fixed;
-	height: 60px;
-	width: 100%;
-	background-color: #343233;
-	z-index: 2020;
-	color: white;
-}
-
-.header.nav-hide {
-	display: none;
-}
-
-.logo-box {
-	width: 60px;
-
-}
-
-.logo-box .text {
-	font-family: Minecraft Title Cyrillic;
-	font-size: 30px;
-	text-align: center;
-	padding-top: 6px;
-}
-
-.nav-box {
-	margin: 18px 15px;
-}
-
-.nav-box ul li {
-	padding-right: 40px;
-}
 
 
 /*============================== GLOBAL ==============================*/
@@ -97,7 +63,7 @@ h2 {
 }
 
 a {
-	color: #fff;
+	color: black;
 	text-decoration: none;
 	user-select: none;
 	-ms-user-select: none;
@@ -107,12 +73,8 @@ a {
 
 a:hover {
 	cursor: pointer;
-	color: #d8d8d8;
+	color: #343233;
 	transition: color 0.3s ease-out;
-}
-
-a:active {
-	color: #b8b8b8;
 }
 
 ul, li {
@@ -127,7 +89,7 @@ ul, li {
 
 .space-inline {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 
@@ -137,7 +99,6 @@ ul, li {
 }
 
 .button {
-	color:black;
 	display: inline-block;
 	margin-top: 20px;
 	padding-top: 15px;
@@ -148,6 +109,70 @@ ul, li {
 	text-align: center;
 }
 
+.button:hover {
+	background: #b8b8b8;
+}
+
+/*============================ HEADER ==============================*/
+
+.header {
+	position: fixed;
+	height: 60px;
+	width: 100%;
+	background-color: #343233;
+	z-index: 2020;
+	color: white;
+}
+
+.header a {
+	color: white;
+}
+
+.header a:hover {
+	color: #d8d8d8;
+}
+
+
+.upheader{
+	color: black;
+	background: linear-gradient(180deg, rgba(52, 50, 51, 0.4) 0%, rgba(52, 50, 51, 0) 100%);
+	transition: linear 0.1s;
+}
+
+.upheader a {
+	color: black;
+	transition: linear 0.1s;
+}
+
+.upheader a:hover {
+	color: #343233;
+	transition: color 0.3s ease-out;
+}
+
+
+.header.nav-hide {
+	display: none;
+}
+
+.logo-box {
+	width: 60px;
+
+}
+
+.logo-box .text {
+	font-family: Minecraft Title Cyrillic;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 6px;
+}
+
+.nav-box {
+	margin: 18px 15px;
+}
+
+.nav-box ul li {
+	padding-right: 40px;
+}
 
 
 /*============================== FOOTER ==============================*/
@@ -205,38 +230,86 @@ footer a {
 	background: url(../img/main/unik-land.png) no-repeat center;
 }
 
+.info u {
+	cursor: pointer;
+}
+
+.info u:hover {
+	color: #343233
+}
+
+.info u:active {
+	color: #b8b8b8
+}
+
 .info-section {
-	margin-top: 100px;
+	margin-top: 50px;
+	flex-wrap: wrap;
 }
 
 .info-section .info {
+	margin: 50px 0;
 	width: 670px;
+}
+
+.image {
+    width: 670px;
 }
 
 .image#planet {
 	background: url(../img/icons/planet.png) center no-repeat;
-	background-size: 350px;
-	height: 240px;
-	width: 670px;
+	background-size: 580px;
 }
 
 .image#decor {
-	background: url(../img/icons/planet.png) center no-repeat;
-	background-size: 350px;
-	height: 268px;
-	width: 670px;
+	background: url(../img/icons/decor.png) center no-repeat;
+	background-size: 550px;
 }
 
 .image#season {
-	background: url(../img/icons/season4.png) center no-repeat;
-	background-size: 350px;
-	height: 281px;
-	width: 670px;
+	background: url(../img/icons/season.png) center no-repeat;
+	background-size: 550px;
 }
 
 .image#whitelist {
 	background: url(../img/icons/whitelist.png) center no-repeat;
-	background-size: 460px;
-	height: 240px;
-	width: 670px;
+	background-size: 550px;
+}
+
+.to-up {
+	display: block;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 50px;
+	right: 40px;
+	cursor: pointer;
+	background: url(../img/main/up-btn.svg) no-repeat center;
+	background-size: cover;
+	opacity: .1;
+	z-index: 1000;
+	transition: linear .15s;
+}
+
+.to-up:hover {
+	opacity: .15;
+	transition: linear .15s;
+}
+
+.disable {
+	display: none;
+}
+
+
+/*============================== ANOTHER ==============================*/
+
+.preheader {
+	height: 415px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.info-header {
+	margin-top: 160px;
+	margin-left: 15px;
+	width: 720px;
 }
