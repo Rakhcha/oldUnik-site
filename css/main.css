@@ -37,7 +37,7 @@
 /*============================== GLOBAL ==============================*/
 
 body {
-	background: url(../img/main/background.jpg) center;
+	background: url(../img/main/background.jpg) top center;
 	font-family: F77 Minecraft;
 	font-size: 24px;
 	color: rgb(0, 0, 0);
@@ -52,7 +52,7 @@ body, h1, h2, ul, li, p{
 }
 
 p {
-	padding-top: 15px;
+	margin-top: 16px;
 	letter-spacing: 0.01em;
 	line-height: 120%;
 }
@@ -92,6 +92,11 @@ ul, li {
 	justify-content: space-between;
 }
 
+.center-inline {
+	display: flex;
+	justify-content: center;
+}
+
 
 .container {
 	margin: 0 auto;
@@ -113,6 +118,37 @@ ul, li {
 	background: #b8b8b8;
 }
 
+.to-up {
+	display: block;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 50px;
+	right: 40px;
+	cursor: pointer;
+	background: url(../img/main/up-btn.svg) no-repeat center;
+	background-size: cover;
+	opacity: .15;
+	z-index: 1000;
+	transition: linear .15s;
+}
+
+.to-up:hover {
+	opacity: .2;
+	transition: linear .15s;
+}
+
+.disable {
+	display: none;
+}
+
+.content-section {
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+
+
+
 /*============================ HEADER ==============================*/
 
 .header {
@@ -131,24 +167,6 @@ ul, li {
 .header a:hover {
 	color: #d8d8d8;
 }
-
-
-.upheader{
-	color: black;
-	background: linear-gradient(180deg, rgba(52, 50, 51, 0.4) 0%, rgba(52, 50, 51, 0) 100%);
-	transition: linear 0.1s;
-}
-
-.upheader a {
-	color: black;
-	transition: linear 0.1s;
-}
-
-.upheader a:hover {
-	color: #343233;
-	transition: color 0.3s ease-out;
-}
-
 
 .header.nav-hide {
 	display: none;
@@ -173,6 +191,8 @@ ul, li {
 .nav-box ul li {
 	padding-right: 40px;
 }
+
+
 
 
 /*============================== FOOTER ==============================*/
@@ -230,24 +250,19 @@ footer a {
 	background: url(../img/main/unik-land.png) no-repeat center;
 }
 
-.info u {
+u {
 	cursor: pointer;
 }
 
-.info u:hover {
+u:hover {
 	color: #343233
 }
 
-.info u:active {
-	color: #b8b8b8
+u:active {
+	color: #616161
 }
 
-.info-section {
-	margin-top: 50px;
-	flex-wrap: wrap;
-}
-
-.info-section .info {
+.content-section .info {
 	margin: 50px 0;
 	width: 670px;
 }
@@ -276,32 +291,11 @@ footer a {
 	background-size: 550px;
 }
 
-.to-up {
-	display: block;
-	position: fixed;
-	width: 50px;
-	height: 50px;
-	bottom: 50px;
-	right: 40px;
-	cursor: pointer;
-	background: url(../img/main/up-btn.svg) no-repeat center;
-	background-size: cover;
-	opacity: .1;
-	z-index: 1000;
-	transition: linear .15s;
-}
 
-.to-up:hover {
-	opacity: .15;
-	transition: linear .15s;
-}
-
-.disable {
-	display: none;
-}
 
 
 /*============================== ANOTHER ==============================*/
+
 
 .preheader {
 	height: 415px;
@@ -312,4 +306,206 @@ footer a {
 	margin-top: 160px;
 	margin-left: 15px;
 	width: 720px;
+}
+
+/*============================== NEWS ==============================*/
+
+.content-section .post {
+	margin: 50px 0;
+	height: 510px;
+	width: 1410px;
+}
+
+.post-main {
+	background: #ffffff80;
+	height: 450px;
+	border-radius: 0px 10px 10px 10px;
+}
+
+.post-image {
+	width: 450px;
+	height: inherit;
+	cursor: pointer;
+	border-radius: 0px 0px 0px 10px;
+}
+
+.post-content {
+	font-size: 18px;
+	margin: 25px;
+	position: relative;
+	width: 910px;
+}
+
+.post-header {
+	font-family: Minecraft Title Cyrillic;
+	background: #cbcbcb;
+	width: fit-content;
+	height: 60px;
+	border-radius: 10px 10px 0 0;
+}
+
+.post-header img {
+	height: 45px;
+	width: 45px;
+	margin: 8px 12px;
+}
+
+.post-header p {
+	margin-right: 30px;
+	cursor: pointer;
+	height: 33px;
+}
+
+.post-header p:hover {
+	color: #343233
+}
+
+.post-header p:active {
+	color: #616161
+}
+
+.post-content .likes {
+	font-family: Minecraft Title Cyrillic;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	height: 35px;
+
+}
+
+.likes {
+	min-width: 60px;
+	background-color: #cbcbcb;
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.likes img {
+	height: 27px;
+    margin: 5px;
+}
+.likes div {
+	margin: 4px;
+	min-width: 18px;
+}
+
+.list-box {
+	margin-top: 30px;
+	justify-content: center;
+	font-family: Minecraft Title Cyrillic;
+}
+
+.list-box div {
+	padding: 0 20px;
+	cursor: default;
+}
+
+.list-box div:nth-child(1), .list-box div:nth-child(3) {
+	cursor: pointer;
+}
+
+/*============================== RULES ==============================*/
+
+.rule-box {
+	margin-bottom: 50px;
+}
+
+.rule-main {
+	background: #ffffff80;
+    border-radius: 0px 10px 10px 10px;
+	width: 1420px;
+}
+
+.rule-main .text {
+	font-size: 18px;
+	margin: 25px;
+	text-indent: 30px;
+	padding: 0 50px 25px 20px;
+	padding-right: 60px;
+}
+
+.rule-header {
+	font-family: Minecraft Title Cyrillic;
+	background: #cbcbcb;
+	width: fit-content;
+	height: 60px;
+	border-radius: 10px 10px 0 0;
+}
+
+.rule-header img {
+	height: 45px;
+	width: 45px;
+	margin: 8px 12px;
+}
+
+.rule-header p {
+	margin-right: 30px;
+	height: 33px;
+}
+
+.warning-box {
+	background-color: #cbcbcb;
+	border-radius: 10px;
+	width: 1420px;
+}
+
+.warning-box p {
+	margin: 15px 30px;
+	font-size: 18px;
+	color: #AA0000;
+	text-indent: 30px;
+}
+
+.warning-box u:hover {
+	color: #800000;
+}
+
+
+/*============================== REGISTER LOGIN MOADL ==============================*/
+
+.lk-join-box {
+	width: 620px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+}
+
+.form {
+	margin: 60px;
+}
+
+.lk-join-box input{
+	border-radius: 0;
+	border: 2px solid #CBCBCB;
+	width: 484px;
+	height: 40px;
+	font-size: 25px;
+	font-family: F77 Minecraft;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 25px;
+}
+
+.lk-join-box input:focus {
+	border: 2px solid #ababab;
+}
+
+.lk-join-box input[type=checkbox]{
+	width: 25px;
+	height: 25px;
+}
+
+.lk-join-box input[type=checkbox]{
+	width: 25px;
+	height: 25px;
+}
+
+.lk-join-box .button {
+	margin: 40px 0 40px 19%;
+}
+
+.lk-join-box h2 {
+	text-align: center;
+	margin-top: 60px;
 }

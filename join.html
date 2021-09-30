@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>UnikVerse - Приватный сервер</title>
+
+</head>
+
+<body onload="switchJoin()">
+
+	<div class="to-up disable"></div>
+
+	<header  class="header upheader">
+		<div class="container inline">
+			
+			<div class="logo-box">
+				<div class="text">
+					U
+				</div>
+			</div>
+
+			
+			<nav class="nav-box">
+				<ul>
+					<li><a href="demoindex.html">Главная</a></li>
+					<li><a href="news.html">Новости</a></li>
+					<li><a href="rules.html">Правила</a></li>
+					<li><a href="">Лавка</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
+
+
+	<section class="preheader">
+		<div class="container">
+			<div class="inline">
+				<div class="info-header">
+					<h2>Личный кабинет</h2>
+					<p>Личный кабинет на проекте UnikVerse.</p>
+					<p>Здесь вы получаете доступ ко всему проекту!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="container">
+			<div class="content-section center-inline">
+				<div class="lk-join-box login-box disable">
+					<h2>Вход</h2>
+					<form class="form">
+						<input name="rlogin" type="text" placeholder="Никнейм/email"><br>
+						<input name="rpass" type="text" placeholder="Пароль"><br>
+
+						<a type="submit" class="button" onclick="locationHashChanged()">Войти</a>
+						<p style="font-size: 16px; text-align: center;"><u onclick="changeHash('register')">Регистрация</u></p>
+						<p style="font-size: 16px; text-align: center;"><u onclick="changeHash('recover')" >Забыл пароль</u></p>
+						
+					</form>
+				</div>
+
+				<div class="lk-join-box recover-box disable">
+					<h2>Забыл <br>пароль</h2>
+					<form class="form">
+						<input name="rlogin" type="text" placeholder="Ваш email"><br>
+
+						<a type="submit" class="button">Восстановить</a>
+						<p style="font-size: 16px; text-align: center;"><u onclick="changeHash('login')">Войти</u></p>
+						<p style="font-size: 16px; text-align: center;"><u onclick="changeHash('register')">Регистрация</u></p>
+
+					</form>
+				</div>
+
+				<div class="lk-join-box register-box">
+					<h2>Регистрация</h2>
+					<form class="form">
+						<input name="rlogin" type="text" placeholder="Никнейм"><br>
+						<input name="remail" type="text" placeholder="E-mail"><br>
+						<input name="rpass" type="text" placeholder="Пароль"><br>
+						<input name="rpass-rep" type="text" placeholder="Повтор пороля"><br>
+						
+						<input name="checkagreepolicy" type="checkbox"><br>
+						<input name="checkrules" type="checkbox"><br>
+
+						<a type="submit" class="button">Регистрация</a>
+						<p style="font-size: 16px; text-align: center;">Уже есть аккаунт? <u onclick="changeHash('login')">Войти</u></p>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<p>UnikVerse. Все права защищены © 2021</p>
+		<p style="color:#cbcbcb">Сайт создал <a href="https://vk.com/irakhchik">Rakhchik</a></p>
+	</footer>	
+
+	<script src="scripts/js/jquery-3.6.0.min.js"></script>
+	<script src="scripts/js/main.js"></script>
+
+</body>
+
+</html>
