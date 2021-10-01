@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>UnikVerse - Приватный сервер</title>
+
+</head>
+
+<body onload="switchProfile()">
+
+	<div class="to-up disable"></div>
+
+	<header  class="header upheader">
+		<div class="container inline">
+			
+			<div class="logo-box">
+				<div class="text">
+					U
+				</div>
+			</div>
+
+			
+			<nav class="nav-box">
+				<ul>
+					<li><a href="demoindex.html">Главная</a></li>
+					<li><a href="news.html">Новости</a></li>
+					<li><a href="rules.html">Правила</a></li>
+					<li><a href="">Лавка</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
+
+
+	<section class="preheader">
+		<div class="container">
+			<div class="column">
+				<div class="info-header">
+					<h2>user_name</h2>
+				</div>
+				<div class="lkmenu inline">
+					<div id="cabinet" onclick="changeHash('cabinet')">Кабинет</div>
+					<div id="settings" onclick="changeHash('settings')">Настройки</div>
+					<div id="skin" onclick="changeHash('skin')">Скины</div>
+					<div id="requests" onclick="changeHash('requests')">Заявки</div>
+					<div id="moderation" onclick="changeHash('moderation')">Модерация</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="container">
+			<div class="content-section space-inline">
+				<div class="skin column">
+					<p class="nickname"></p>
+					<div class="skin-img"></div>
+				</div>
+				<div class="profile-box column">
+					<div class="profile-info space-inline">
+						<div class="info-names">
+
+						</div>
+						<div class="info-states">
+
+						</div>
+					</div>
+					<div class="profile-footer-info"></div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<p>UnikVerse. Все права защищены © 2021</p>
+		<p style="color:#cbcbcb">Сайт создал <a href="https://vk.com/irakhchik">Rakhchik</a></p>
+	</footer>
+
+	<script src="scripts/js/jquery-3.6.0.min.js"></script>
+	<script src="scripts/js/main.js"></script>
+
+</body>
+
+</html>

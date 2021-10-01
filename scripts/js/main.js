@@ -21,6 +21,7 @@ window.addEventListener('scroll', function(){
 window.onhashchange = function(){
 	hash = window.location.hash == "" ? null : window.location.hash.substr(1);
 	if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) == "join.html") switchJoin();
+	if (window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) == "profile.html") switchProfile();
 }
 
 
@@ -101,13 +102,32 @@ function switchJoin() {
 }
 
 
+// ============== PROFILE DOC ==============
 
+var lkmenu = document.querySelectorAll('.lkmenu div');
+var lkblocks
 
+function switchProfile() {
 
+	switch(hash){
+		case "settings":
+		case "skin":
+		case "requests":
+		case "moderation":
+		case "cabinet":
+			setOnProfile(hash)
+			return;
+		default:
+			changeHash('cabinet')
+	}
+}
 
-
-
-
+function setOnProfile(setOn){
+	lkmenu.forEach(e => {
+		e.removeAttribute('style');
+		if(e.id == setOn) e.setAttribute('style','color:black')
+	})
+}
 
 
 

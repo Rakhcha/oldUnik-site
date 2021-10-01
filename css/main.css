@@ -87,6 +87,11 @@ ul, li {
 	display: flex;
 }
 
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
 .space-inline {
 	display: flex;
 	justify-content: space-between;
@@ -304,7 +309,6 @@ u:active {
 
 .info-header {
 	margin-top: 160px;
-	margin-left: 15px;
 	width: 720px;
 }
 
@@ -508,4 +512,31 @@ u:active {
 .lk-join-box h2 {
 	text-align: center;
 	margin-top: 60px;
+}
+
+/*============================== PROFILE ==============================*/
+
+.lkmenu{
+	margin-top: 30px;
+	font-family: Minecraft Title Cyrillic;
+	color: rgba(52, 50, 51, 0.5);
+	align-items: center;
+}
+
+.lkmenu #active{
+	font-family: Minecraft Title Cyrillic;
+	color: black;
+}
+
+.lkmenu div {
+	margin-right: 100px;
+	cursor: pointer;
+}
+
+.lkmenu div:hover{
+	color: #343233
+}
+
+.lkmenu div:active {
+	color: black
 }
