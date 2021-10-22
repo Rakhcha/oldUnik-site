@@ -7,14 +7,14 @@
 	// mode: 1 - полностью (голова, руки, ноги, тело) спереди; 2 - полностью сзади; 3- голова
 	// URL по типу: /skin.php?mode=1&size=100&user=Rakhcha&type=alex
 	$generator_info = array(
-		'skins_directory' => __DIR__.'/skins/',
+		'skins_directory' => __DIR__.'/../../../img/skins/',
 		'default' => 'unikdefault_skin_user',
 		'user' => filter_input(INPUT_GET,'user',FILTER_SANITIZE_FULL_SPECIAL_CHARS),
 		'type' => filter_input(INPUT_GET,'type',FILTER_SANITIZE_FULL_SPECIAL_CHARS),
 		'size' => filter_input(INPUT_GET,'size',FILTER_SANITIZE_NUMBER_FLOAT),
 		'mode' => filter_input(INPUT_GET,'mode',FILTER_SANITIZE_NUMBER_FLOAT),
 	);
-
+	
 	if (!is_dir($generator_info['skins_directory'])) exit('EROOR SKIN_01 Путь к скинам или плащам не является папкой! Укажите правильный путь.');
 	if(empty($generator_info['user'])) $generator_info['user'] = 'unikdefault_skin_user';
 	if(empty($generator_info['type'])) $generator_info['type'] = 'steve';

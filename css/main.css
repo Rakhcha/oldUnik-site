@@ -37,13 +37,14 @@
 /*============================== GLOBAL ==============================*/
 
 body {
+	position: relative;
 	background: url(../img/main/background.jpg) top center;
 	font-family: F77 Minecraft;
 	font-size: 24px;
 	color: rgb(0, 0, 0);
-	box-sizing: border-box;
 	min-height: 100vh;
 	box-sizing: border-box;
+	padding-bottom: 200px;
 }
 
 body, h1, h2, ul, li, p{
@@ -100,6 +101,11 @@ ul, li {
 .center-inline {
 	display: flex;
 	justify-content: center;
+}
+
+.space-evenly {
+	display: flex;
+	justify-content: space-evenly;
 }
 
 
@@ -203,18 +209,40 @@ ul, li {
 /*============================== FOOTER ==============================*/
 
 footer {
-	margin-top: 101px;
+	position: absolute;
+	bottom: 0px;
 	width: 100%;
-	height: 100px;
-	background-color: rgba(255, 255, 255, 0.5);
 	font-size: 16px;
 	z-index: 2020;
-	text-align: center;
+	height: 201px;
 }
+
 
 footer a {
 	color: #cbcbcb;
 	text-decoration: underline;
+}
+
+.footer {
+	margin-top: 101px;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	height: 100px;
+}
+
+.footer p {
+	margin: 0;
+}
+
+footer:before {
+	background-image: url(../img/main/line-top.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	content: '';
+	height: 101px;
+	position: absolute;
+	width: 100%;
+	transform: scale(-1);
 }
 
 /*============================== INDEX ==============================*/
@@ -234,7 +262,7 @@ footer a {
 	padding: 101px 0;
 }
 
-.content:after, .content:before{
+.content:before{
 	background-image: url(../img/main/line-top.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -242,10 +270,6 @@ footer a {
 	height: 101px;
 	position: absolute;
 	width: 100%;
-}
-
-.content:after {
-	transform: scale(-1);
 }
 
 .image-box-welcome {
@@ -539,4 +563,43 @@ u:active {
 
 .lkmenu div:active {
 	color: black
+}
+
+.info-card {
+	margin: 100px 80px;
+}
+
+.info-card .skin-img {
+	width: 200px;
+	height: 400px;
+}
+
+.info-card .nickname-box {
+	margin-bottom: 10px;
+	
+}
+
+.nickname {
+	width: fit-content;
+	text-align: center;
+	margin: auto;
+	padding: 2px 15px;
+	color:white;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.profile-box {
+	width: 700px;
+	height: 440px;
+	padding-left: 40px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.info-names p , .info-states p {
+	margin-top: 5px;
+}
+
+.info-states {
+	margin-left: 100px;
 }

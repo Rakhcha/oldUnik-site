@@ -105,20 +105,33 @@ function switchJoin() {
 // ============== PROFILE DOC ==============
 
 var lkmenu = document.querySelectorAll('.lkmenu div');
-var lkblocks
+var lk_element = document.querySelectorAll('.lk_element');
 
 function switchProfile() {
-
 	switch(hash){
 		case "settings":
+			setOnProfile("settings-btn");
+			setOnProfileElement('settings');
+			return;
 		case "skin":
+			setOnProfile("skin-btn");
+			setOnProfileElement('skin');
+			return;
 		case "requests":
+			setOnProfile("requests-btn");
+			setOnProfileElement('requests');
+			return;
 		case "moderation":
+			setOnProfile("moderation-btn");
+			setOnProfileElement('moderation');
+			return;
 		case "cabinet":
-			setOnProfile(hash)
+			setOnProfile("cabinet-btn");
+			setOnProfileElement('info-card');
 			return;
 		default:
-			changeHash('cabinet')
+			changeHash('cabinet');
+			return;
 	}
 }
 
@@ -126,6 +139,13 @@ function setOnProfile(setOn){
 	lkmenu.forEach(e => {
 		e.removeAttribute('style');
 		if(e.id == setOn) e.setAttribute('style','color:black')
+	})
+}
+
+function setOnProfileElement(element_name){
+	lk_element.forEach(e => {
+		e.classList.add('disable');
+		if(e.classList.contains(element_name)) e.classList.remove('disable');
 	})
 }
 

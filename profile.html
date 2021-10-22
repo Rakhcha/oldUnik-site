@@ -44,14 +44,14 @@
 		<div class="container">
 			<div class="column">
 				<div class="info-header">
-					<h2>user_name</h2>
+					<h2>Rakhchik</h2>
 				</div>
 				<div class="lkmenu inline">
-					<div id="cabinet" onclick="changeHash('cabinet')">Кабинет</div>
-					<div id="settings" onclick="changeHash('settings')">Настройки</div>
-					<div id="skin" onclick="changeHash('skin')">Скины</div>
-					<div id="requests" onclick="changeHash('requests')">Заявки</div>
-					<div id="moderation" onclick="changeHash('moderation')">Модерация</div>
+					<div id="cabinet-btn" onclick="changeHash('cabinet')">Кабинет</div>
+					<div id="settings-btn" onclick="changeHash('settings')">Настройки</div>
+					<div id="skin-btn" onclick="changeHash('skin')">Скины</div>
+					<div id="requests-btn" onclick="changeHash('requests')">Заявки</div>
+					<div id="moderation-btn" onclick="changeHash('moderation')">Модерация</div>
 				</div>
 			</div>
 		</div>
@@ -59,33 +59,54 @@
 
 	<section class="content">
 		<div class="container">
-			<div class="content-section space-inline">
-				<div class="skin column">
-					<p class="nickname"></p>
-					<div class="skin-img"></div>
-				</div>
-				<div class="profile-box column">
-					<div class="profile-info space-inline">
-						<div class="info-names">
-
+			<div class="content-section">
+				<div class="info-card lk_element space-evenly">
+					<div style="align-items: center;" class="skin column">
+						<div class="nickname-box">
+							<div  class="nickname">Rakhchik</div>	
 						</div>
-						<div class="info-states">
-
+						<div class="skin-img">
+							<img src="img/test.png" alt="">
 						</div>
 					</div>
-					<div class="profile-footer-info"></div>
+					<div class="profile-box column space-evenly">
+						<div class="profile-info inline">
+							<div class="info-names">
+								<p>Имя:</p>
+								<p>Статус:</p>
+								<p>Дата рождения:</p>
+								<p>Живет в</p>
+								<p>Баланс:</p><br>
+								<p>Время в игре:</p>
+								<p>Побед:</p>
+								<p>Поражений:</p>
+								<p>ДискордID:</p>
+							</div>
+							<div class="info-states">
+								<p>Илья</p>
+								<p>Администратор</p>
+								<p>05.07.2001</p>
+								<p>Стоунайленд</p>
+								<p>375ю.</p><br>
+								<p>124 часа</p>
+								<p>24</p>
+								<p>3</p>
+								<p>#4373</p>
+							</div>
+						</div>
+						<div class="profile-footer-info"><u>Играет с первого сезона</u></div>
+					</div>
 				</div>
-
-
-
 			</div>
 		</div>
 	</section>
 
 
 	<footer>
-		<p>UnikVerse. Все права защищены © 2021</p>
-		<p style="color:#cbcbcb">Сайт создал <a href="https://vk.com/irakhchik">Rakhchik</a></p>
+		<div class="footer">
+			<p>UnikVerse. Все права защищены © 2021</p>
+			<p style="color:#cbcbcb">Сайт создал <a href="https://vk.com/irakhchik">Rakhchik</a></p>
+		</div>
 	</footer>
 
 	<script src="scripts/js/jquery-3.6.0.min.js"></script>
